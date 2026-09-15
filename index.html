@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Şanlıurfa Prime Masaj Salonu | Sağlık, Hijyen & VIP Jakuzili Spa Terapisi</title>
+  <meta name="description" content="Şanlıurfa Prime Masaj Salonu: Klimalı, hijyenik ve özel jakuzili odalarımızda sağlık amaçlı medikal masaj, aromaterapi, VIP spa ve kese-köpük terapileri. Haftanın 7 günü 11:30 - 23:30. Randevu: 0532 170 44 63">
+  <meta name="keywords" content="şanlıurfa masaj salonu, şanlıurfa prime masaj, urfa masaj, medikal masaj şanlıurfa, jakuzili masaj urfa, haliliye masaj, karaköprü masaj salonu, kese köpük urfa, sultan masajı şanlıurfa">
+  <meta name="author" content="Şanlıurfa Prime Masaj Salonu">
+  <meta name="robots" content="index, follow">
+  
+  <!-- SEO & Yerel Konum Etiketleri -->
+  <meta name="geo.region" content="TR-63">
+  <meta name="geo.placename" content="Şanlıurfa">
+  <meta name="geo.position" content="37.165977;38.806454">
+  <meta name="ICBM" content="37.165977, 38.806454">
+
+  <!-- Schema.org Zengin Yapısal Veri (DaySpa & SSS) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "DaySpa",
+        "@id": "https://sanliurfaprimemasaj.com/#spa",
+        "name": "Şanlıurfa Prime Masaj Salonu",
+        "description": "Şanlıurfa'da sağlık ve hijyen odaklı, klimalı ve jakuzili odalarda profesyonel masaj ve spa hizmetleri.",
+        "telephone": "+905321704463",
+        "priceRange": "₺₺",
+        "currenciesAccepted": "TRY",
+        "paymentAccepted": "Nakit, Kredi Kartı, Havale",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Haliliye",
+          "addressRegion": "Şanlıurfa",
+          "addressCountry": "TR"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "11:30",
+            "closes": "23:30"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Şanlıurfa Prime Masaj Salonu hijyen standartları nasıldır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Salonumuz sağlık ve hijyen odaklı çalışmaktadır. Tüm klimalı terapi odalarımız, masaj yataklarımız ve VIP jakuzilerimiz her seans öncesinde ve sonrasında dezenfekte edilerek kişiye özel steril ürünlerle hizmete hazırlanır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Çalışma saatleriniz nedir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Haftanın 7 günü kesintisiz olarak 11:30 ile 23:30 saatleri arasında hizmet vermekteyiz."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Jakuzili VIP masaj paketine neler dahildir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "VIP Masaj paketimizde 60 dakika masaj, kese & köpük banyosu, 15 dakika özel hidromasajlı jakuzi seansı, cilt bakımı, taze meyve tabağı ve duş hizmeti dahildir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Nasıl randevu alabilirim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "0532 170 44 63 numaralı telefon hattımızı doğrudan arayarak veya WhatsApp butonumuz üzerinden anında randevunuzu oluşturabilirsiniz."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts & FontAwesome Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    
+    :root {
+      --bg-dark: #080d0a;
+      --bg-card: rgba(15, 26, 20, 0.85);
+      --bg-card-hover: rgba(22, 38, 29, 0.95);
+      --emerald-primary: #0d5c46;
+      --emerald-light: #169b76;
+      --gold-primary: #d4af37;
+      --gold-light: #f3e5ab;
+      --gold-gradient: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa820a 100%);
+      --text-light: #f8fafc;
+      --text-muted: #a3b8cc;
+      --border-emerald: rgba(22, 155, 118, 0.3);
+      --border-gold: rgba(212, 175, 55, 0.3);
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+      padding-top: 90px;
+    }
+
+    a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(8, 13, 10, 0.94); box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+      backdrop-filter: blur(15px); padding: 12px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 90px; border-bottom: 1px solid var(--border-emerald);
+    }
+    
+    .nav-logo { display: flex; align-items: center; gap: 14px; }
+    .logo-badge {
+      width: 52px; height: 52px; background: linear-gradient(135deg, #09382b 0%, #051a14 100%);
+      border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      border: 1px solid var(--gold-primary); box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+    }
+    .logo-badge i { font-size: 26px; color: var(--gold-primary); }
+    
+    .logo-title h1 {
+      font-family: 'Cinzel', serif; font-size: 20px; font-weight: 800;
+      background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      letter-spacing: 1px; line-height: 1;
+    }
+    .logo-title span { font-size: 10px; font-weight: 700; color: #169b76; letter-spacing: 2px; text-transform: uppercase; display: block; margin-top: 4px; }
+
+    .nav-links { display: flex; gap: 22px; align-items: center; }
+    .nav-links a { font-size: 13.5px; font-weight: 600; color: #cbd5e1; }
+    .nav-links a:hover { color: var(--gold-light); }
+    
+    .nav-cta {
+      background: var(--gold-gradient); color: #000 !important;
+      padding: 10px 20px; border-radius: 8px; font-size: 13px !important; font-weight: 800 !important;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3); display: inline-flex; align-items: center; gap: 8px;
+    }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(212, 175, 55, 0.5); }
+
+    .mobile-toggle {
+      display: none; width: 44px; height: 44px; background: rgba(22, 155, 118, 0.1);
+      border: 1px solid var(--border-emerald); border-radius: 10px;
+      align-items: center; justify-content: center; color: var(--gold-primary); font-size: 20px; cursor: pointer;
+    }
+
+    /* MOBİL MENÜ PANALİ */
+    .mobile-drawer-overlay {
+      position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px);
+      z-index: 1050; opacity: 0; visibility: hidden; transition: all 0.4s ease;
+    }
+    .mobile-drawer-overlay.active { opacity: 1; visibility: visible; }
+
+    .mobile-drawer {
+      position: fixed; top: 0; right: -320px; width: 290px; height: 100vh;
+      background: #0b1410; border-left: 2px solid var(--gold-primary); z-index: 1060;
+      padding: 30px 22px; display: flex; flex-direction: column; justify-content: space-between;
+      transition: right 0.4s ease;
+    }
+    .mobile-drawer.active { right: 0; }
+
+    .drawer-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px; }
+    .drawer-header h3 { font-family: 'Cinzel', serif; font-size: 16px; color: var(--gold-primary); }
+    .drawer-close { font-size: 22px; color: #94a3b8; cursor: pointer; }
+
+    .drawer-menu { display: flex; flex-direction: column; gap: 12px; }
+    .drawer-menu a {
+      font-size: 14px; font-weight: 600; color: #e2e8f0; padding: 12px 16px;
+      border-radius: 10px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05);
+      display: flex; align-items: center; gap: 12px;
+    }
+    .drawer-menu a i { color: var(--gold-primary); width: 20px; }
+
+    /* ===== HERO BANNER ===== */
+    .hero {
+      background: radial-gradient(circle at 80% 20%, rgba(22, 155, 118, 0.15) 0%, transparent 50%),
+                  radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%), var(--bg-dark);
+      padding: 70px 40px; min-height: calc(100vh - 90px); display: flex; align-items: center;
+    }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 50px; width: 100%; max-width: 1280px; margin: 0 auto; align-items: center; }
+    
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px; background: rgba(22, 155, 118, 0.15);
+      border: 1px solid var(--border-emerald); padding: 8px 18px; border-radius: 50px;
+      font-size: 12px; font-weight: 700; color: var(--emerald-light); text-transform: uppercase; margin-bottom: 20px;
+    }
+    .hero-title { font-family: 'Cinzel', serif; font-size: 46px; font-weight: 800; color: #fff; line-height: 1.2; margin-bottom: 20px; }
+    .hero-title span { background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: block; font-size: 32px; font-weight: 700; margin-top: 8px; }
+    .hero-p { font-size: 15.5px; color: var(--text-muted); margin-bottom: 35px; max-width: 580px; }
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+    
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 28px; border-radius: 10px; font-size: 14px; font-weight: 700; transition: all 0.3s; border: none; cursor: pointer; }
+    .btn-gold { background: var(--gold-gradient); color: #000; box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3); }
+    .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(212, 175, 55, 0.5); }
+    .btn-whatsapp { background: #25D366; color: #fff; box-shadow: 0 6px 20px rgba(37,211,102,0.3); }
+    .btn-whatsapp:hover { background: #1ebe57; transform: translateY(-3px); }
+    .btn-outline { background: rgba(255,255,255,0.04); color: #fff; border: 1px solid var(--border-emerald); }
+    .btn-outline:hover { background: rgba(22, 155, 118, 0.2); border-color: var(--emerald-light); transform: translateY(-3px); }
+
+    .hero-card {
+      background: var(--bg-card); border-radius: 24px; padding: 16px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.8), 0 0 30px var(--border-emerald);
+      border: 1px solid var(--border-gold); position: relative;
+    }
+    .hero-card img { width: 100%; height: 390px; object-fit: cover; border-radius: 16px; display: block; }
+
+    /* ===== SEKSİYON STANDARTLARI ===== */
+    .section { padding: 90px 40px; position: relative; }
+    .section-bg { background-color: rgba(11, 20, 16, 0.6); }
+    .section-header { text-align: center; max-width: 740px; margin: 0 auto 60px; }
+    .section-badge { font-size: 12px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-primary); margin-bottom: 10px; display: block; }
+    .section-title { font-family: 'Cinzel', serif; font-size: 38px; font-weight: 700; color: #fff; margin-bottom: 15px; }
+    .section-desc { font-size: 15px; color: var(--text-muted); }
+
+    /* ===== HİZMET VE KATALOG PAKET KARTLARI ===== */
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1280px; margin: 0 auto; }
+    
+    .pricing-card {
+      background: var(--bg-card); border-radius: 20px; padding: 32px 26px;
+      border: 1px solid rgba(255,255,255,0.08); transition: all 0.4s ease; display: flex; flex-direction: column;
+      position: relative; overflow: hidden; backdrop-filter: blur(12px);
+    }
+    .pricing-card:hover {
+      transform: translateY(-8px); border-color: var(--gold-primary);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.8), 0 0 25px rgba(212, 175, 55, 0.2);
+      background: var(--bg-card-hover);
+    }
+    
+    .pricing-card.featured {
+      border: 2px solid var(--gold-primary);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.6), 0 0 25px rgba(212, 175, 55, 0.3);
+    }
+    .featured-badge {
+      position: absolute; top: 15px; right: -30px; background: var(--gold-gradient);
+      color: #000; font-size: 10px; font-weight: 800; text-transform: uppercase;
+      padding: 4px 35px; transform: rotate(45deg); box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+
+    .card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; }
+    .card-top h3 { font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700; color: #fff; }
+    .card-duration { font-size: 12.5px; font-weight: 700; color: var(--emerald-light); background: rgba(22, 155, 118, 0.15); padding: 5px 12px; border-radius: 50px; border: 1px solid var(--border-emerald); }
+    
+    .card-price { margin-bottom: 22px; padding-bottom: 18px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .price-num { font-family: 'Cinzel', serif; font-size: 38px; font-weight: 900; color: var(--gold-light); line-height: 1; }
+    .price-num span { font-size: 20px; font-weight: 700; color: var(--gold-primary); margin-left: 4px; }
+    
+    .card-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px; flex-grow: 1; }
+    .card-features li { font-size: 13.5px; color: #cbd5e1; display: flex; align-items: flex-start; gap: 10px; }
+    .card-features li i { color: var(--gold-primary); font-size: 14px; margin-top: 3px; }
+
+    /* ===== GÖRSEL GALERİ ===== */
+    .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1280px; margin: 0 auto; }
+    .gallery-item {
+      position: relative; border-radius: 16px; overflow: hidden; height: 260px;
+      border: 1px solid var(--border-emerald); box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+      transition: all 0.4s ease;
+    }
+    .gallery-item:hover { transform: translateY(-5px) scale(1.02); border-color: var(--gold-primary); }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .gallery-overlay {
+      position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%);
+      display: flex; flex-direction: column; justify-content: flex-end; padding: 18px; opacity: 0; transition: opacity 0.3s;
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-overlay h4 { font-family: 'Cinzel', serif; font-size: 16px; color: var(--gold-light); }
+    .gallery-overlay p { font-size: 11px; color: #cbd5e1; }
+
+    /* ===== ÖZELLİKLER & SAĞLIK/HİJYEN ===== */
+    .features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 1280px; margin: 0 auto; }
+    .feature-box {
+      background: var(--bg-card); padding: 30px 22px; border-radius: 16px; text-align: center;
+      border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;
+    }
+    .feature-box:hover { background: var(--bg-card-hover); border-color: var(--border-emerald); transform: translateY(-5px); }
+    .f-icon { width: 60px; height: 60px; background: rgba(22, 155, 118, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; color: var(--gold-primary); margin: 0 auto 18px; border: 1px solid var(--border-gold); }
+    .feature-box h4 { font-family: 'Cinzel', serif; font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 10px; }
+    .feature-box p { font-size: 13px; color: var(--text-muted); }
+
+    /* ===== BANKA HAVALE DETAY KUTUSU ===== */
+    .iban-box {
+      max-width: 800px; margin: 40px auto 0; background: linear-gradient(135deg, rgba(13, 92, 70, 0.4), rgba(8, 13, 10, 0.8));
+      border: 1px solid var(--gold-primary); border-radius: 16px; padding: 25px 30px; text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .iban-title { font-family: 'Cinzel', serif; font-size: 18px; color: var(--gold-primary); margin-bottom: 10px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+    .iban-code { font-family: monospace; font-size: 18px; font-weight: 700; color: #fff; background: rgba(0,0,0,0.5); padding: 10px 15px; border-radius: 8px; border: 1px dashed var(--border-gold); display: inline-block; margin: 10px 0; letter-spacing: 1px; }
+    .iban-holder { font-size: 13px; color: var(--emerald-light); font-weight: 700; }
+    .iban-note { font-size: 11px; color: #f87171; text-transform: uppercase; font-weight: 800; margin-top: 8px; letter-spacing: 1px; }
+
+    /* ===== SSS AKORDEON ===== */
+    .faq-container { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+    .faq-item {
+      background: var(--bg-card); border-radius: 12px; border: 1px solid rgba(255,255,255,0.08);
+      overflow: hidden; transition: all 0.3s ease;
+    }
+    .faq-item.active { border-color: var(--border-gold); background: var(--bg-card-hover); }
+    .faq-question {
+      padding: 20px 24px; font-size: 15.5px; font-weight: 700; color: #fff;
+      display: flex; justify-content: space-between; align-items: center; cursor: pointer;
+    }
+    .faq-question i { color: var(--gold-primary); transition: transform 0.3s ease; font-size: 14px; }
+    .faq-item.active .faq-question i { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease;
+      padding: 0 24px; font-size: 14px; color: var(--text-muted); line-height: 1.7;
+    }
+    .faq-item.active .faq-answer { max-height: 200px; padding: 0 24px 20px 24px; }
+
+    /* ===== İLETİŞİM BÖLÜMÜ ===== */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 50px; max-width: 1280px; margin: 0 auto; align-items: start; }
+    .contact-details h3 { font-family: 'Cinzel', serif; font-size: 32px; font-weight: 700; color: #fff; margin-bottom: 20px; }
+    
+    .contact-method { display: flex; gap: 18px; margin-bottom: 22px; align-items: flex-start; }
+    .c-icon {
+      width: 48px; height: 48px; background: rgba(22, 155, 118, 0.15); color: var(--gold-primary);
+      border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      font-size: 20px; flex-shrink: 0; border: 1px solid var(--border-gold);
+    }
+    .c-info h4 { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+    .c-info p { color: var(--text-muted); font-size: 14px; }
+    
+    .map-box { border-radius: 20px; overflow: hidden; height: 430px; box-shadow: 0 20px 50px rgba(0,0,0,0.8); border: 1px solid var(--border-gold); }
+    .map-box iframe { width: 100%; height: 100%; border: none; }
+
+    /* ===== FOOTER ===== */
+    .footer { background: #040806; color: #fff; padding: 60px 40px 30px; border-top: 1px solid var(--border-emerald); }
+    .footer-wrapper { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px; max-width: 1280px; margin: 0 auto; }
+    .footer-copyright { text-align: center; margin-top: 30px; font-size: 13px; color: #64748b; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px; }
+
+    /* ===== MOBİL SABİT BUTONLAR ===== */
+    .sticky-support {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 999;
+      background: rgba(8, 13, 10, 0.96); backdrop-filter: blur(14px); padding: 12px 20px;
+      display: none; gap: 12px; box-shadow: 0 -5px 25px rgba(0,0,0,0.9); border-top: 1px solid var(--border-gold);
+    }
+    .sticky-support a { flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; border-radius: 10px; font-size: 13px; font-weight: 800; }
+    .stk-call { background: var(--gold-gradient); color: #000 !important; }
+    .stk-wp { background: #25D366; color: #fff !important; }
+
+    .reveal { opacity: 0; transform: translateY(25px); transition: all 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
+    @media(max-width: 1024px) {
+      .hero-grid, .pricing-grid, .gallery-grid, .features-grid, .contact-grid { grid-template-columns: 1fr; gap: 35px; }
+      .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid, .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero { padding: 40px 24px; text-align: center; }
+      .hero-title { font-size: 36px; }
+      .hero-p { margin: 0 auto 35px; }
+      .hero-btns { justify-content: center; }
+      .section { padding: 60px 24px; }
+    }
+    
+    @media(max-width: 768px) {
+      .navbar { padding: 15px 20px; }
+      .nav-links { display: none; }
+      .mobile-toggle { display: flex; }
+      .pricing-grid, .gallery-grid, .features-grid { grid-template-columns: 1fr; }
+      .hero-title { font-size: 30px; }
+      .hero-title span { font-size: 22px; }
+      .sticky-support { display: flex; }
+      .footer { padding-bottom: 80px; }
+      .footer-wrapper { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-logo" onclick="window.scrollTo(0,0)" style="cursor:pointer;">
+      <div class="logo-badge">
+        <i class="fa-solid fa-spa"></i>
+      </div>
+      <div class="logo-title">
+        <h1>ŞANLIURFA PRİME</h1>
+        <span>Masaj & Sağlık Spa Merkezi</span>
+      </div>
+    </div>
+    
+    <div class="nav-links">
+      <a href="#hizmetler">Masaj Katalogu</a>
+      <a href="#galeri">Salonumuz</a>
+      <a href="#saglik-hijyen">Hijyen & Sağlık</a>
+      <a href="#sss">S.S.S</a>
+      <a href="#iletisim">İletişim & Konum</a>
+      <a href="https://wa.me/905321704463?text=Merhaba,%20Şanlıurfa%20Prime%20Masaj%20Salonu%20için%20randevu%20almak%20istiyorum." target="_blank" class="nav-cta">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp Randevu
+      </a>
+    </div>
+
+    <div class="mobile-toggle" id="drawerOpenBtn">
+      <i class="fa-solid fa-bars-staggered"></i>
+    </div>
+  </nav>
+
+  <!-- MOBİL MENÜ DRAWER -->
+  <div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div>
+      <div class="drawer-header">
+        <h3>ŞANLIURFA PRİME SPA</h3>
+        <div class="drawer-close" id="drawerCloseBtn"><i class="fa-solid fa-xmark"></i></div>
+      </div>
+      <nav class="drawer-menu">
+        <a href="#hizmetler" class="drawer-link"><i class="fa-solid fa-book-open"></i> Hizmet Katalogu</a>
+        <a href="#galeri" class="drawer-link"><i class="fa-solid fa-images"></i> Salon Görselleri</a>
+        <a href="#saglik-hijyen" class="drawer-link"><i class="fa-solid fa-pump-soap"></i> Sağlık & Hijyen</a>
+        <a href="#sss" class="drawer-link"><i class="fa-solid fa-circle-question"></i> Sıkça Sorulanlar</a>
+        <a href="#iletisim" class="drawer-link"><i class="fa-solid fa-location-dot"></i> İletişim & Konum</a>
+      </nav>
+    </div>
+    
+    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center;">
+      <p style="font-size:12px; color:var(--emerald-light); margin-bottom:12px;">Haftanın 7 Günü: 11:30 - 23:30</p>
+      <a href="tel:+905321704463" class="btn btn-gold" style="width:100%; font-size:13px; padding:12px; margin-bottom:10px;"><i class="fa-solid fa-phone"></i> Hemen Ara</a>
+      <a href="https://wa.me/905321704463?text=Merhaba,%20randevu%20almak%20istiyorum." target="_blank" class="btn btn-whatsapp" style="width:100%; font-size:13px; padding:12px;"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </aside>
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <div class="hero-badge"><i class="fa-solid fa-shield-halved"></i> %100 Hijyenik & Sağlık Amaçlı Terapi</div>
+        <h2 class="hero-title">Bedeninizi ve Zihninizi <span>Yenileyen VIP Dokunuşlar</span></h2>
+        <p class="hero-p">Şanlıurfa Prime Masaj Salonu'nda özel iklimlendirilmş klimalı odalarda, hidromasajlı lüks jakuziler, uzman terapistler ve kese-köpük ritüelleri ile sağlığınızı ve huzurunuzu tazeleyin.</p>
+        <div class="hero-btns">
+          <a href="tel:+905321704463" class="btn btn-gold"><i class="fa-solid fa-phone"></i> 0532 170 44 63</a>
+          <a href="https://wa.me/905321704463?text=Merhaba,%20masaj%20seansı%20ve%20fiyatlar%20hakkında%20bilgi%20ve%20randevu%20almak%20istiyorum." target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp'tan Yazın</a>
+          <a href="#hizmetler" class="btn btn-outline"><i class="fa-solid fa-list-check"></i> Hizmet Kataloğu</a>
+        </div>
+      </div>
+      
+      <div class="hero-card">
+        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1000&q=80" alt="Şanlıurfa Prime Masaj ve Spa Salonu">
+      </div>
+    </div>
+  </header>
+
+  <!-- HİZMET KATALOGU & FİYATLAR -->
+  <section class="section" id="hizmetler">
+    <div class="section-header reveal">
+      <span class="section-badge">AHES SPA & TERAPİ MENÜSÜ</span>
+      <h2 class="section-title">Masaj & Bakım Katalogumuz</h2>
+      <p class="section-desc">Bedeninizin ihtiyacına uygun terapi seansını seçin, tam hijyenik klimalı odalarımızda yenilenmenin keyfini çıkarın.</p>
+    </div>
+
+    <div class="pricing-grid">
+      
+      <!-- 1. Klasik Masaj -->
+      <div class="pricing-card reveal">
+        <div class="card-top">
+          <h3>Klasik Masaj</h3>
+          <div class="card-duration"><i class="fa-regular fa-clock"></i> 40 Dk</div>
+        </div>
+        <div class="card-price">
+          <div class="price-num">1.500 <span>TL</span></div>
+        </div>
+        <ul class="card-features">
+          <li><i class="fa-solid fa-circle-check"></i> 40 Dakika Profesyonel Masaj</li>
+          <li><i class="fa-solid fa-circle-check"></i> Seans Sonrası Ferahlatıcı Duş</li>
+          <li><i class="fa-solid fa-circle-check"></i> Klimalı & Hijyenik Bakım Odası</li>
+        </ul>
+        <a href="https://wa.me/905321704463?text=Merhaba,%2040%20dk%20Klasik%20Masaj%20(1.500%20TL)%20için%20randevu%20almak%20istiyorum." target="_blank" class="btn btn-outline" style="width:100%;">Randevu Al</a>
+      </div>
+
+      <!-- 2. Soft Masaj -->
+      <div class="pricing-card reveal" style="transition-delay: 0.1s;">
+        <div class="card-top">
+          <h3>Soft Masaj</h3>
+          <div class="card-duration"><i class="fa-regular fa-clock"></i> 50 Dk</div>
+        </div>
+        <div class="card-price">
+          <div class="price-num">2.000 <span>TL</span></div>
+        </div>
+        <ul class="card-features">
+          <li><i class="fa-solid fa-circle-check"></i> 50 Dakika Rahatlatıcı Soft Masaj</li>
+          <li><i class="fa-solid fa-circle-check"></i> Seans Sonrası Duş Hizmeti</li>
+          <li><i class="fa-solid fa-circle-check"></i> Stres Azaltıcı Özel Aromaterapik Dokunuşlar</li>
+        </ul>
+        <a href="https://wa.me/905321704463?text=Merhaba,%2050%20dk%20Soft%20Masaj%20(2.000%20TL)%20için%20randevu%20almak%20istiyorum." target="_blank" class="btn btn-outline" style="width:100%;">Randevu Al</a>
+      </div>
+
+      <!-- 3. Medikal Masaj -->
+      <div class="pricing-card reveal" style="transition-delay: 0.2s;">
+        <div class="card-top">
+          <h3>Medikal Masaj</h3>
+          <div class="card-duration"><i class="fa-regular fa-clock"></i> 60 Dk</div>
+        </div>
+        <div class="card-price">
+          <div class="price-num">2.500 <span>TL</span></div>
+        </div>
+        <ul class="card-features">
+          <li><i class="fa-solid fa-circle-check"></i> 60 Dakika Sağlık Odaklı Medikal Masaj</li>
+          <li><i class="fa-solid fa-circle-check"></i> Geleneksel Kese & Köpük Terapisi</li>
+          <li><i class="fa-solid fa-circle-check"></i> Seans Sonrası Ferahlatıcı Duş</li>
+          <li><i class="fa-solid fa-circle-check"></i> Kulunç ve Kas Ağrılarına Özel Uygulama</li>
+        </ul>
+        <a href="https://wa.me/905321704463?text=Merhaba,%2060%20dk%20Medikal%20Masaj%20(2.500%20TL)%20için%20randevu%20almak%20istiyorum." target="_blank" class="btn btn-outline" style="width:100%;">Randevu Al</a>
+      </div>
+
+      <!-- 4. Soğuk Jel Masajı -->
+      <div class="pricing-card reveal">
+        <div class="card-top">
+          <h3>Soğuk Jel Masajı</h3>
+          <div class="card-duration"><i class="fa-regular fa-clock"></i> 60 Dk</div>
+        </div>
+        <div class="card-price">
+          <div class="price-num">3.000 <span>TL</span></div>
+        </div>
+        <ul class="card-features">
+          <li><i class="fa-solid fa-circle-check"></i> 60 Dakika Ferahlatıcı Soğuk Jel Masajı</li>
+          <li><i class="fa-solid fa-circle-check"></i> Kese & Köpük Terapisi</li>
+          <li><i class="fa-solid fa-circle-check"></i> Besleyici Cilt Bakımı</li>
+          <li><i class="fa-solid fa-circle-check"></i> Seans Sonrası Duş</li>
+        </ul>
+        <a href="https://wa.me/905321704463?text=Merhaba,%20Soğuk%20Jel%20Masajı%20(3.000%20TL)%20için%20randevu%20almak%20istiyorum." target="_blank" class="btn btn-outline" style="width:100%;">Randevu Al</a>
+      </div>
+
+      <!-- 5. Aromaterapi Masajı -->
+      <div class="pricing-card reveal" style="transition-delay: 0.1s;">
+        <div class="card-top">
+          <h3>Aromaterapi Masajı</h3>
+          <div class="card-duration"><i class="fa-regular fa-clock"></i> 60 Dk</div>
+        </div>
+        <div class="card-price">
+          <div class="price-num">3.500 <span>TL</span></div>
+        </div>
+        <ul class="card-features">
+          <li><i class="fa-solid fa-circle-check"></i> 60 Dakika Doğal Esansiyel Yağlı Masaj</li>
+          <li><i class="fa-solid fa-circle-check"></i> Derinlemesine Kese & Köpük Banyosu</li>
+          <li><i class="fa-solid fa-circle-check"></i> Yüz & Cilt Bakımı</li>
+          <li><i class="fa-solid fa-circle-check"></i> Taze Meyve Tabağı İkramı & Duş</li>
+        </ul>
+        <a href="https://wa.me/905321704463?text=Merhaba,%20Aromaterapi%20Masajı%20(3.500%20TL)%20için%20randevu%20almak%20istiyorum." target="_blank" class="btn btn-outline" style="width:100%;">Randevu Al</a>
+      </div>
+
+      <!-- 6. VIP Masaj (Süper Öne Çıkan) -->
+      <div class="pricing-card featured reveal" style="transition-delay: 0.2s;">
+        <div class="featured-badge">VIP JAKUZİLİ</div>
+        <div class="card-top">
+          <h3>VIP Masaj</h3>
+          <div class="card-duration"><i class="fa-regular fa-clock"></i> 60 Dk + 15 Dk Jakuzi</div>
+        </div>
+        <div class="card-price">
+          <div class="price-num">4.000 <span>TL</span></div>
+        </div>
+        <ul class="card-features">
+          <li><i class="fa-solid fa-circle-check"></i> 60 Dakika Lüks Terapi Masajı</li>
+          <li><i class="fa-solid fa-circle-check"></i> <strong>15 Dakika Hidromasajlı Jakuzi Keyfi</strong></li>
+          <li><i class="fa-solid fa-circle-check"></i> Kese & Köpük + Cilt Bakımı</li>
+          <li><i class="fa-solid fa-circle-check"></i> Taze Meyve Tabağı ve İkramlıklar</li>
+        </ul>
+        <a href="https://wa.me/905321704463?text=Merhaba,%20VIP%20Jakuzili%20Masaj%20(4.000%20TL)%20için%20randevu%20almak%20istiyorum." target="_blank" class="btn btn-gold" style="width:100%;">VIP Randevu Al</a>
+      </div>
+
+      <!-- 7. Sultan Masajı (Çift Terapist) -->
+      <div class="pricing-card reveal" style="grid-column: span 1; transition-delay: 0.3s;">
+        <div class="card-top">
+          <h3>Sultan Masajı</h3>
+          <div class="card-duration"><i class="fa-regular fa-clock"></i> 60 Dk (2 Terapist)</div>
+        </div>
+        <div class="card-price">
+          <div class="price-num">4.500 <span>TL</span></div>
+        </div>
+        <ul class="card-features">
+          <li><i class="fa-solid fa-circle-check"></i> <strong>2 Profesyonel Terapist Eşliğinde Masaj</strong></li>
+          <li><i class="fa-solid fa-circle-check"></i> Geleneksel Kese & Köpük Banyosu</li>
+          <li><i class="fa-solid fa-circle-check"></i> Özel Cilt Bakımı & Meyve Tabağı</li>
+          <li><i class="fa-solid fa-circle-check"></i> Seans Sonrası Ferahlatıcı Duş</li>
+        </ul>
+        <a href="https://wa.me/905321704463?text=Merhaba,%20Sultan%20Masajı%20(4.500%20TL)%20için%20randevu%20almak%20istiyorum." target="_blank" class="btn btn-outline" style="width:100%;">Randevu Al</a>
+      </div>
+
+    </div>
+
+    <!-- IBAN DETAY KUTUSU -->
+    <div class="iban-box reveal">
+      <div class="iban-title"><i class="fa-solid fa-building-columns"></i> HAVALE / EFT İLE ÖDEME BİLGİSİ</div>
+      <div class="iban-code">TR09 0006 7010 0000 0306 3720 11</div>
+      <div class="iban-holder">Hesap Sahibi: HAKAN PERÇİN (Ahes Spa & Terapi)</div>
+      <div class="iban-note">* Ücret iadesi bulunmamaktadır.</div>
+    </div>
+  </section>
+
+  <!-- SALON VE MASAJ GÖRSELLERİ -->
+  <section class="section section-bg" id="galeri">
+    <div class="section-header reveal">
+      <span class="section-badge">HİJYEN VE KONFOR</span>
+      <h2 class="section-title">Salonumuz ve Terapi Odalarımız</h2>
+      <p class="section-desc">Şanlıurfa Prime'ın özel iklimlendirmeli klimalı odaları ve lüks hidromasaj jakuzileri ile tanışın.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="Şanlıurfa Masaj Odası">
+        <div class="gallery-overlay">
+          <h4>Klimalı Terapi Odaları</h4>
+          <p>Her Mevsim İdeal Sıcaklıkta Kişiye Özel Odalar</p>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" style="transition-delay: 0.1s;">
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Şanlıurfa Jakuzili VIP Masaj">
+        <div class="gallery-overlay">
+          <h4>Hidromasajlı Lüks Jakuzi</h4>
+          <p>VIP Paketlerimizde Kişiye Özel Sıcak Jakuzi Keyfi</p>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" style="transition-delay: 0.2s;">
+        <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=800&q=80" alt="Şanlıurfa Spa ve Masaj Yağları">
+        <div class="gallery-overlay">
+          <h4>Aromaterapi & Sağlık</h4>
+          <p>Bitkisel ve Kas Gevşetici Özel Terapi Yağları</p>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" style="transition-delay: 0.3s;">
+        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80" alt="Şanlıurfa Kese Köpük Terapisi">
+        <div class="gallery-overlay">
+          <h4>Geleneksel Kese & Köpük</h4>
+          <p>Cildi Ölü Hücrelerden Arındıran Özel Bakım</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAĞLIK, HİJYEN VE STANDARTLAR -->
+  <section class="section" id="saglik-hijyen">
+    <div class="section-header reveal">
+      <span class="section-badge">GÜVENİLİR & TEMİZ</span>
+      <h2 class="section-title">Sağlık ve Hijyen Standartlarımız</h2>
+      <p class="section-desc">Misafirlerimizin sağlığı bizim birincil önceliğimizdir. Tüm seanslar sertifikalı standartlarda sunulmaktadır.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-box reveal">
+        <div class="f-icon"><i class="fa-solid fa-pump-medical"></i></div>
+        <h4>%100 Steril ve Clean</h4>
+        <p>Her seans sonrası masaj yatakları, jakuziler ve havlular özel dezenfektanlarla sterilize edilir.</p>
+      </div>
+
+      <div class="feature-box reveal" style="transition-delay: 0.1s;">
+        <div class="f-icon"><i class="fa-solid fa-snowflake"></i></div>
+        <h4>Klimalı Özel Odalar</h4>
+        <p>Yazın serin, kışın sıcacık iklimlendirilen tam müstakil masaj ve spa odaları.</p>
+      </div>
+
+      <div class="feature-box reveal" style="transition-delay: 0.2s;">
+        <div class="f-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+        <h4>Sağlık Amaçlı Terapi</h4>
+        <p>Kas sertlikleri, kulunç ve kronik yorgunluğa iyi gelen medikal odaklı seanslar.</p>
+      </div>
+
+      <div class="feature-box reveal" style="transition-delay: 0.3s;">
+        <div class="f-icon"><i class="fa-solid fa-clock"></i></div>
+        <h4>11:30 - 23:30 Açıktır</h4>
+        <p>Haftanın 7 günü esnek çalışma saatleri ile günün stresini dilediğiniz an atın.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIKÇA SORULAN SORULAR -->
+  <section class="section section-bg" id="sss">
+    <div class="section-header reveal">
+      <span class="section-badge">MERAK EDİLENLER</span>
+      <h2 class="section-title">Sıkça Sorulan Sorular</h2>
+      <p class="section-desc">Şanlıurfa Prime Masaj Salonu hakkında öğrenmek istediğiniz tüm detaylar.</p>
+    </div>
+
+    <div class="faq-container reveal">
+      <div class="faq-item active">
+        <div class="faq-question">
+          <span>1. Masaj seansları sağlık ve hijyen kurallarına uygun mu?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Evet, Şanlıurfa Prime tamamen sağlık ve hijyen odaklı hizmet vermektedir. Her seans öncesinde odamız, yataklarımız ve jakuzilerimiz dezenfekte edilerek kişiye özel tekstil ürünleri hazırlanır.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>2. Randevu almak zorunlu mu?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Sizlere beklemeden, klimalı ve özel hazırlanmış odalarımızda VIP hizmet sunabilmemiz için gelmeden önce 0532 170 44 63 hattımızdan randevu almanızı önermekteyiz.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>3. Jakuzi kullanımı hangi paketlerde bulunur?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Özel hidromasajlı jakuzi seansı, 4.000 TL değerindeki VIP Masaj paketimizde 15 dakika süreli olarak sunulmaktadır.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>4. Salonunuzun çalışma saatleri nedir?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Salonumuz haftanın her günü (Pazartesi - Pazar dâhil) 11:30 ile 23:30 saatleri arasında kesintisiz hizmet vermektedir.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>5. Ödemeyi banka havalesi ile yapabilir miyim?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Evet, sayfamızda belirtilen TR09 0006 7010 0000 0306 3720 11 IBAN numarasına Hakan Perçin adına EFT/Havale yapabilirsiniz.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- İLETİŞİM VE HARİTA -->
+  <section class="section" id="iletisim">
+    <div class="contact-grid">
+      <div class="contact-details reveal">
+        <span class="section-badge">BİZE ULAŞIN</span>
+        <h3>Rezervasyon & İletişim</h3>
+        <p style="color:var(--text-muted); margin-bottom:30px;">Sağlığınızı ve huzurunuzu ertelemeyin. Hemen randevu alarak kendinize özel bir spa deneyimi hediye edin.</p>
+        
+        <div class="contact-method">
+          <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
+          <div class="c-info">
+            <h4>Doğrudan Arama Hattı</h4>
+            <p><a href="tel:+905321704463" style="color:var(--gold-light); font-weight:800; font-size:18px;">0532 170 44 63</a></p>
+          </div>
+        </div>
+
+        <div class="contact-method">
+          <div class="c-icon"><i class="fa-solid fa-clock"></i></div>
+          <div class="c-info">
+            <h4>Çalışma Saatleri</h4>
+            <p>Haftanın 7 Günü: <strong>11:30 - 23:30</strong></p>
+          </div>
+        </div>
+
+        <div class="contact-method">
+          <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="c-info">
+            <h4>Konum ve Bölge</h4>
+            <p>Haliliye / Şanlıurfa (Merkezi Kolay Ulaşım)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-box reveal">
+        <iframe src="https://maps.google.com/maps?q=37.1659769,38.8064537&hl=tr&z=15&output=embed" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-wrapper">
+      <div class="nav-logo">
+        <div class="logo-badge" style="width:44px; height:44px;">
+          <i class="fa-solid fa-spa" style="font-size:20px;"></i>
+        </div>
+        <div class="logo-title">
+          <h1 style="font-size:18px;">ŞANLIURFA PRİME</h1>
+          <span>Masaj & Spa Merkezi</span>
+        </div>
+      </div>
+      <div style="font-size: 13.5px; color: #94a3b8;">
+        Şanlıurfa &bull; Rezervasyon: 0532 170 44 63
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <p>&copy; 2026 Şanlıurfa Prime Masaj Salonu. Tüm Hakları Saklıdır.</p>
+    </div>
+  </footer>
+
+  <!-- MOBİL SABİT YÖNLENDİRME BARI -->
+  <div class="sticky-support">
+    <a href="tel:+905321704463" class="stk-call"><i class="fa-solid fa-phone"></i> Hemen Ara</a>
+    <a href="https://wa.me/905321704463?text=Merhaba,%20Şanlıurfa%20Prime%20masaj%20seansı%20için%20randevu%20almak%20istiyorum." target="_blank" class="stk-wp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+  </div>
+
+  <script>
+    // MOBİL MENÜ
+    const drawerOpenBtn = document.getElementById('drawerOpenBtn');
+    const drawerCloseBtn = document.getElementById('drawerCloseBtn');
+    const drawerOverlay = document.getElementById('drawerOverlay');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const drawerLinks = document.querySelectorAll('.drawer-link');
+
+    function openDrawer() {
+      mobileDrawer.classList.add('active');
+      drawerOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+      mobileDrawer.classList.remove('active');
+      drawerOverlay.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    drawerOpenBtn.addEventListener('click', openDrawer);
+    drawerCloseBtn.addEventListener('click', closeDrawer);
+    drawerOverlay.addEventListener('click', closeDrawer);
+    drawerLinks.forEach(link => link.addEventListener('click', closeDrawer));
+
+    // SSS AKORDEON
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        faqItems.forEach(el => el.classList.remove('active'));
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    // SCROLL ANİMASYON
+    const reveals = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+      for (let i = 0; i < reveals.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = reveals[i].getBoundingClientRect().top;
+        if (elementTop < windowHeight - 60) {
+          reveals[i].classList.add('visible');
+        }
+      }
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+</body>
+</html>
